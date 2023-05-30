@@ -73,16 +73,15 @@ main {
   border-radius: 50%;
 }
 
+.user-content p {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
 .user-content label {
   display: block;
   color: var(--grayish-blue);
   font-weight: var(--font-manrope-500);
-}
-
-.user-content p {
-  flex-grow: 1;
-  padding-left: 1rem;
-  color: initial;
 }
 
 .btn-share {
@@ -152,10 +151,6 @@ main {
   filter: initial;
 }
 
-.triangle {
-  /* display: none; */
-}
-
 @media (min-width: 53.125rem) {
   .card {
     flex-direction: row;
@@ -197,6 +192,7 @@ main {
   .card > img {
     width: 40%;
     object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
   }
 
   .triangle {
