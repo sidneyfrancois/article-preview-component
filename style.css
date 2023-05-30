@@ -26,6 +26,9 @@ main {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+
   width: 90%;
   background-color: white;
   border-radius: 10px;
@@ -148,4 +151,23 @@ main {
 
 .btn-share-active:hover > img {
   filter: initial;
+}
+
+@media (min-width: 50rem) {
+  .card {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .content {
+  }
+
+  .content h3 {
+    font-size: 1.5em;
+  }
+
+  .card > img {
+    width: 40%;
+    object-fit: cover;
+  }
 }
