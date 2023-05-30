@@ -23,6 +23,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  min-height: 100vh;
 }
 
 .card {
@@ -32,12 +34,7 @@ main {
   width: 90%;
   background-color: white;
   border-radius: 10px;
-  margin: 5rem 0;
   overflow: hidden;
-}
-
-.content {
-  padding: 2.2rem 2.5rem 1rem;
 }
 
 .content {
@@ -46,6 +43,8 @@ main {
   align-items: center;
 
   position: relative;
+  gap: 1.2rem;
+  padding: 2.2rem 2.5rem 1.2rem;
 }
 
 .content > h3 {
@@ -54,8 +53,6 @@ main {
 
 .content > p {
   color: var(--desaturated-dark-blue);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   font-weight: var(--font-manrope-500);
 }
 
@@ -112,7 +109,6 @@ main {
   width: 100%;
 
   background-color: var(--very-dark-grayish-blue);
-  padding: 1.4rem 2.5rem;
 }
 
 .share-container {
@@ -132,7 +128,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 1.4rem 2.5rem;
+  padding: 1.2rem 2.5rem;
 }
 
 .btn-share-active {
@@ -156,11 +152,27 @@ main {
   filter: initial;
 }
 
+.triangle {
+  /* display: none; */
+}
+
 @media (min-width: 53.125rem) {
   .card {
     flex-direction: row;
     width: 50%;
     overflow: initial;
+  }
+
+  .content {
+    gap: 1.2rem;
+  }
+
+  .content h3 {
+    font-size: 1.5em;
+  }
+
+  .content p {
+    flex: 1;
   }
 
   .btn-share-active {
@@ -171,14 +183,12 @@ main {
     position: relative;
   }
 
-  .content h3 {
-    font-size: 1.5em;
-  }
-
   .share-container-active {
+    justify-content: center;
+
     width: 15rem;
-    padding: 1rem 1.8rem;
-    border-radius: 20px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
     top: -4.5rem;
     left: -6rem;
     bottom: auto;
@@ -187,5 +197,17 @@ main {
   .card > img {
     width: 40%;
     object-fit: cover;
+  }
+
+  .triangle {
+    border-color: var(--very-dark-grayish-blue) transparent transparent
+      transparent;
+    border-style: solid;
+    border-width: 15px 15px 15px 15px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    bottom: -1.6rem;
+    left: 40%;
   }
 }
